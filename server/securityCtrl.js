@@ -4,8 +4,6 @@ module.exports = {
 
         const {securityAnswer} = req.body;
 
-        console.log(req.body)
-
         if(securityAnswer === 'snow' || securityAnswer === 'Snow'){
             return res.sendStatus(200);
         } else {

@@ -149,3 +149,58 @@
   font-size: x-large;
   font-weight: 500;
 }
+
+/*  */
+
+@media(max-width: 414px){
+  .opening-box {
+    width: 80%;
+    height: 55vh;
+  }
+  .begin-button {
+    width: 25vw;
+  }
+  .flex-security {
+    width: 80vw;
+    padding: 3%;
+  }
+  .input-one {
+    width: 25vw;
+  }
+  .security-button {
+    width: 20vw;
+  }
+  .answer {
+    padding-bottom: 20%;
+    width: 50vw;
+  }
+  .survey-button {
+    width: 20vw;
+  }
+}
+
+@media(min-width: 768px){
+  .opening-box {
+    width: 50%;
+    height: 40vh;
+  }
+  .p-one {
+    font-size: large;
+  }
+  .begin-button {
+    width: 10vw;
+  }
+  .flex-security {
+    font-size: large;
+    padding: 3%;
+    height: 25vh;
+  }
+  .security-button {
+    height: 3vh;
+    width: 8vw;
+  }
+  .survey-button {
+    height: 3vh;
+    width: 8vw;
+  }
+}
