@@ -6,7 +6,6 @@ const massive = require('massive');
 const app = express();
 const {SERVER_PORT, CONNECTION_STRING} = process.env;
 const port = SERVER_PORT;
-const securityCtrl = require('./securityCtrl');
 const resultsCtrl = require('./resultsCtrl');
 
 app.use(cors());
@@ -28,5 +27,4 @@ app.get('*', (req, res)=>{
 });
 
 //ENDPOINTS
-app.post('/api/check-answer', securityCtrl.securityCheck);
 app.post('/api/results', resultsCtrl.results);

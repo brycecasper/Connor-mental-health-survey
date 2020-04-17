@@ -8,10 +8,10 @@
 }
 
 .opening-box {
-  height: 50vh;
+  height: 60vh;
   width: 30%;
   border-radius: 5px;
-  background-color: burlywood;
+  background-color: dimgray;
   margin-top: 20vh;
   display: flex;
   flex-direction: column;
@@ -43,53 +43,6 @@
 
 /*  */
 
-.security-main {
-  height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(to right, darkslategray, cadetblue);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-security {
-  height: 35vh;
-  width: 50vw;
-  border-radius: 5px;
-  background-color: burlywood;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 10px 10px 10px rgb(45, 45, 45);
-  margin-bottom: 20vh;
-  font-weight: 500;
-}
-
-.p-two {
-  font-size: larger;
-}
-
-.input-one {
-  width: 10vw;
-  margin-top: 2vh;
-}
-
-.security-button {
-  margin-top: 2vh;
-  height: 5vh;
-  width: 5vw;
-  border-radius: 5%;
-  font-weight: bolder;
-  font-size: small;
-}
-.security-button:hover {
-  cursor: pointer;
-  background-color: darkgoldenrod;
-}
-
-/*  */
-
 .survey-main {
   height: 100vh;
   width: 100%;
@@ -104,7 +57,7 @@
   width: 60%;
   margin: 5%;
   padding: 3%;
-  background-color: burlywood;
+  background-color: dimgray;
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 10px rgb(45, 45, 45);

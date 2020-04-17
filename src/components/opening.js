@@ -3,7 +3,7 @@ import React from 'react';
 const Opening = props => {
 
     const begin = () => {
-        props.history.push('/security-question');
+        props.history.push('/survey');
     }
 
     return(
