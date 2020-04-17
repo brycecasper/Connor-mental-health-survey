@@ -53,7 +53,7 @@ class Survey extends Component {
                     <textarea className='answer' value={this.state.three} name='three' 
                         onChange={this.handleChange}></textarea>
 
-                    <p>What do you use music for?</p>
+                    <p>Why do you listen to music and why is it importanat to you?</p>
                     <textarea className='answer' value={this.state.four} name='four' 
                         onChange={this.handleChange}></textarea>
 
