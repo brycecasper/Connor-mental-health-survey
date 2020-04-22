@@ -1,4 +1,4 @@
-const path = require('path');
+// const path = require('path');
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -26,7 +26,8 @@ massive({
 })
 .catch(err => console.log(err));
 
-app.use(express.static(path.join(`${__dirname}/../build`)));
+app.use(express.static(`${__dirname}/../build`));
+// app.use(express.static(path.join(`${__dirname}/../build`)));
 
 //ENDPOINTS
 app.post('/api/results', resultsCtrl.results);
