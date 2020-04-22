@@ -7,7 +7,6 @@ const app = express();
 const {SERVER_PORT, CONNECTION_STRING} = process.env;
 const port = SERVER_PORT;
 const resultsCtrl = require('./resultsCtrl');
-const authCtrl = require('./authCtrl');
 
 app.use(cors());
 app.use(express.json());
@@ -32,8 +31,6 @@ app.use(express.static(path.join(`${__dirname}/../build`)));
 //ENDPOINTS
 app.post('/api/results', resultsCtrl.results);
 app.get('/api/results-list', resultsCtrl.getResults);
-app.post('/auth/password', authCtrl.auth);
-
 
 // app.get('*', (req, res)=>{
 //     res.sendFile(path.join(__dirname, '../build/index.html'));
