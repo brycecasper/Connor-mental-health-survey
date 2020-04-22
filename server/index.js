@@ -17,6 +17,7 @@ massive({
     ssl: {
         rejectUnauthorized: false
     }
+})
 .then(db => {
     app.set('db', db);
     console.log('database connected');
@@ -24,8 +25,7 @@ massive({
         console.log(`Server running on ${port}`);
     })
 })
-.catch(err => console.log(err))
-});
+.catch(err => console.log(err));
 
 app.use(express.static(path.join(`${__dirname}/../build`)));
 
