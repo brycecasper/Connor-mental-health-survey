@@ -24,6 +24,7 @@ massive({
         console.log(`Server running on ${port}`);
     })
 })
+.catch(err => console.log(err));
 
 app.use( express.static( `${__dirname}/../build` ) );
 
