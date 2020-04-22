@@ -1,4 +1,3 @@
-const path = require('path');
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -32,7 +31,3 @@ app.use( express.static( `${__dirname}/../build` ) );
 app.post('/api/results', resultsCtrl.results);
 app.get('/api/results-list', resultsCtrl.getResults);
 app.post('/auth/password', authCtrl.auth);
-
-app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../build/index.html'));
-});
