@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 import axios from 'axios';
 
 const Auth = props => {
@@ -6,7 +7,7 @@ const Auth = props => {
 
     const auth = () => {
         axios.post('/auth/password', {password: passwordInput})
-        .then(res => props.history.push('/secure'))
+        .then(() => props.history.push('/secure'))
         .catch(err => console.log(err));
     }
 
