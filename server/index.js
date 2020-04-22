@@ -7,11 +7,17 @@ const app = express();
 const {SERVER_PORT, CONNECTION_STRING} = process.env;
 const port = SERVER_PORT;
 const resultsCtrl = require('./resultsCtrl');
+const authCtrl = require('./authCtrl');
 
 app.use(cors());
 app.use(express.json());
 
-massive(CONNECTION_STRING)
+massive({
+    connectionString: CONNECTION_STRING,
+    ssl: {
+        rejectUnauthorized: false
+    }
+})
 .then(db => {
     app.set('db', db);
     console.log('database connected');
@@ -22,9 +28,9 @@ massive(CONNECTION_STRING)
 
 app.use( express.static( `${__dirname}/../build` ) );
 
-app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../build/index.html'));
-});
+
 
 //ENDPOINTS
 app.post('/api/results', resultsCtrl.results);
+app.get('/api/results-list', resultsCtrl.getResults);
+app.post('/auth/password', authCtrl.auth);
