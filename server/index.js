@@ -27,7 +27,7 @@ massive({
 })
 .catch(err => console.log(err));
 
-app.use( express.static( `${__dirname}/../build` ) );
+app.use(express.static(path.join(`${__dirname}/../build`)));
 
 //ENDPOINTS
 app.post('/api/results', resultsCtrl.results);
@@ -35,6 +35,6 @@ app.get('/api/results-list', resultsCtrl.getResults);
 app.post('/auth/password', authCtrl.auth);
 
 
-app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../build/index.html'));
-});
+// app.get('*', (req, res)=>{
+//     res.sendFile(path.join(__dirname, '../build/index.html'));
+// });
