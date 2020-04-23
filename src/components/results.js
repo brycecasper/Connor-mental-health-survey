@@ -11,7 +11,10 @@ const Results = () => {
 
     const getResults = () => {
         axios.get('/api/results-list')
-        .then(res => setResultsList(res.data))
+        .then(res => {
+            console.log(res)
+            setResultsList(res.data)
+        })
         .catch(err => console.log(err));
     }
 
