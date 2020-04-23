@@ -12,7 +12,10 @@ module.exports = {
     getResults: (req, res) => {
         const db = req.app.get('db');
         db.get_results()
-        .then(data => res.status(200).send(data))
+        .then(data => {
+            console.log(data)
+            res.status(200).send(data)
+        })
         .catch(err => {
             console.log('hit')
             res.status(500).send(err)
