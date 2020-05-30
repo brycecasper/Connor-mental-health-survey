@@ -25,7 +25,6 @@ const Discussion = props => {
     }
 
     return (
-        <div>
         <main className='discussion-main'>
             
             <section className='posts'>
@@ -40,10 +39,9 @@ const Discussion = props => {
             </section>
 
             <textarea className='post-input' type='text' value={postInput} onChange={(e) => setPostInput(e.target.value)} />
+            <button className='post-button' onClick={submitPost}>Post</button>
 
         </main>
-        <button className='post-button' onClick={submitPost}>Post</button>
-        </div>
     )
 }
 
