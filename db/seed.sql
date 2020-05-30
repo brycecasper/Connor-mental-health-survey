@@ -13,3 +13,8 @@ create table survey (
     eleven varchar(150),
     twelve varchar(150)
 );
+
+create table post_input (
+    id serial primary key,
+    post varchar(3000)
+);
