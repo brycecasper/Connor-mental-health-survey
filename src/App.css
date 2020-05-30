@@ -130,6 +130,10 @@
   .survey-button {
     width: 20vw;
   }
+  .post-button {
+    
+    width: 10vw;
+  }
 }
 
 @media(min-width: 768px){
